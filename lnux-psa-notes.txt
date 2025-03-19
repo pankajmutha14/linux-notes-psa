@@ -30,7 +30,7 @@ Linux History
 
 -> Linus Torvalds identified several limitations and challenges in the Unix OS.
 
--> He discovered an OS that aligned with his vision, known as Minux OS.
+-> He discovered an OS that aligned with his vision, known as Minix OS.
 
 -> Using Minix OS as a reference, he modified its code and introduced a new operating system—Linux OS.
 
