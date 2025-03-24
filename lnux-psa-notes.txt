@@ -198,8 +198,11 @@ wc : Word count command to count lines, words, and characters in a file
         # Count only the number of words  
         wc -w test.txt 
 
-        # Count only the number of characters  
+        # Count only the number of bytes  
         wc -c test.txt
+
+        # Count only the number of characters  
+        wc -m test.txt
 
 
 #########################
