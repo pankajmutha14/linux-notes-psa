@@ -397,6 +397,53 @@ By assigning users to the right groups, the company can ensure that employees on
 # **Rename a group**  
   sudo groupmod -n <new-group-name> <old-group-name>  
 
+####################################################################################################################
+
+Enabling Password-Based Authentication in Linux
+________________________________________________
+
+To enable password-based authentication in a Linux system, we need to modify two important configuration files:
+
+1. sudoers
+2. sshd_config
+
+What is the sudoers file in Linux?
+The sudoers file is a critical configuration file that controls which users can run commands as a superuser (root).
+
+$ sudo cat /etc/sudoers
+Warning: Editing the sudoers file incorrectly can break the system. Always use the visudo command to edit it safely.
+
+$ sudo visudo
+Add the following line at the end of the file:
+
+<username> ALL=(ALL:ALL) ALL
+Press CTRL + X, then Y, and hit Enter.
+
+How to Enable Password-Based Authentication for Users?
+By default, password authentication is disabled in Linux virtual machines (VMs) for security reasons. To enable it:
+
+Open the sshd_config file:
+
+$ sudo vi /etc/ssh/sshd_config
+Modify the following line:
+Find this line:
+
+PasswordAuthentication no
+Change it to:
+
+PasswordAuthentication yes
+Save and exit (ESC → :wq → Enter).
+
+Restart the SSH service for changes to take effect:
+
+$ sudo systemctl restart sshd
+Now, you can connect to the Linux VM using a username and password:
+
+$ ssh username@public-ip
+
+####################################################################################################################
+
+
 
 
 
