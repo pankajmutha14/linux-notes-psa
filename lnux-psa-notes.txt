@@ -444,7 +444,7 @@ $ ssh username@public-ip
 ####################################################################################################################
 File Permissions in Linux
 
-File permissions in Linux help secure files and protect data by controlling access to different users.
+File permissions will give restricted access to the users
 ####################################################################################################################
 
 Types of Permissions - 
