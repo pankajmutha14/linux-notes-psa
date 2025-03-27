@@ -442,7 +442,98 @@ Now, you can connect to the Linux VM using a username and password:
 $ ssh username@public-ip
 
 ####################################################################################################################
+File Permissions in Linux
 
+File permissions in Linux help secure files and protect data by controlling access to different users.
+####################################################################################################################
+
+Types of Permissions - 
+Linux has three basic types of permissions:
+
+r → Read (View file contents)
+w → Write (Modify or delete file contents)
+x → Execute (Run as a program or script)
+
+Understanding File/Directory Permissions - 
+
+Permissions are represented using 9 characters, as shown below:
+rwxrwxrwx f1.txt
+
+Each section of the permission string corresponds to different user categories:
+1. First 3 characters → Owner/User permissions
+2. Middle 3 characters → Group permissions
+3. Last 3 characters → Others (everyone else) permissions
+
+Examples:
+r--r-xr--  f2.txt
+User (Owner): Read (r--)
+Group: Read + Execute (r-x)
+Others: Read (r--)
+
+r-xrw--w-  f3.txt
+User (Owner): Read + Execute (r-x)
+Group: Read + Write (rw-)
+Others: Write (--w)
+
+Changing File/Directory Permissions Using chmod
+The chmod command allows you to modify file permissions:
+
++ → Add permission
+- → Remove permission
+
+Examples:
+
+# Give execute permission to the user
+chmod u+x f1.txt
+
+# Give write permission to the group
+chmod g+w f1.txt
+
+# Remove execute permission from others
+chmod o-x f1.txt
+
+# Remove all permissions from others
+chmod o-rwx f1.txt
+
+# Grant all permissions to the group
+chmod g+rwx f1.txt
+File Permissions in Numeric Format
+Permissions can also be represented using numbers (0–7), where:
+
+Number	Permissions
+0	No permissions
+1	Execute only
+2	Write only
+3	Write + Execute
+4	Read only
+5	Read + Execute
+6	Read + Write
+7	Read + Write + Execute
+Examples:
+
+# Give execute permission to all (ugo+x)
+chmod 111 f1.txt
+
+# Give write permission to all (ugo+w)
+chmod 222 f1.txt
+
+# User: rwx, Group: rw, Others: rx
+chmod 765 f1.txt
+
+# User: r, Group: rx, Others: rw
+chmod 456 f1.txt
+
+# Give full permissions to everyone
+chmod 777 f1.txt
+
+# Remove all permissions from User & Group, but allow Others full access
+chmod 007 f1.txt
+
+Summary
+Permissions (r, w, x) define access control for files and directories.
+They apply to three user categories: Owner, Group, Others.
+Use chmod to modify permissions either in symbolic (u+x, g-w, etc.) or numeric (755, 644, etc.) format.
+Numeric permissions use a combination of values (0–7) to set access levels efficiently.
 
 
 
