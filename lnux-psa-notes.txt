@@ -535,6 +535,71 @@ They apply to three user categories: Owner, Group, Others.
 Use chmod to modify permissions either in symbolic (u+x, g-w, etc.) or numeric (755, 644, etc.) format.
 Numeric permissions use a combination of values (0–7) to set access levels efficiently.
 
+############################################################################################
+chown Command in Linux
+The chown command is used to change the ownership of files and directories in Linux. It allows modifying both the owner and the group associated with a file or directory.
+#############################################################################################
+
+1️⃣ Basic Syntax
+
+sudo chown [new-owner] [file/directory]
+or
+sudo chown [new-owner]:[new-group] [file/directory]
+
+2️⃣ Changing File/Directory Ownership
+1. Change the Owner of a File
+sudo chown user1 file.txt
+✅ Effect: file.txt will now belong to user1.
+
+2. Change Only the Group
+sudo chown :group1 file.txt
+✅ Effect: The group of file.txt is now group1, but the owner remains unchanged.
+
+3. Change Both Owner and Group
+sudo chown user1:group1 file.txt
+✅ Effect: file.txt now belongs to user1 and group1.
+
+####################################################################################################
+Finding Files in Linux
+In Linux, the find command is used to search for files and directories based on different criteria such as name, type, size, and modification time.
+#####################################################################################################
+
+1️⃣ Basic Syntax
+
+find [directory] [options] [search criteria]
+[directory] → The location where you want to search (e.g., /home, /var, etc.).
+[options] → Filters such as file name, type, size, date, etc.
+[search criteria] → The specific property you are searching for.
+
+2️⃣ Common Use Cases
+1. Find a File by Name
+
+sudo find /home -name "f1.txt"
+✅ Effect: Searches for f1.txt inside the /home directory.
+
+2. Find Empty Files
+sudo find /home -type f -empty
+✅ Effect: Lists all empty files (-type f) inside /home.
+
+3. Find Empty Directories
+sudo find /home -type d -empty
+✅ Effect: Lists all empty directories (-type d) inside /home.
+
+3️⃣ Finding Files Based on Modification Time
+The -mtime option searches for files based on modification time.
+
+4. Find Files Modified 30 Days Ago
+sudo find /home -mtime 30 -print
+✅ Effect: Displays files inside /home that were last modified 30 days ago.
+
+5. Find Files Modified 1 Day Ago
+sudo find /home -mtime 1 -print
+✅ Effect: Displays files inside /home that were modified 1 day ago.
+
+6. Delete Files Older Than 30 Days
+sudo find /home -mtime +30 -delete
+✅ Effect: Deletes files inside /home that haven’t been modified in the last 30 days.
+
 
 
 
