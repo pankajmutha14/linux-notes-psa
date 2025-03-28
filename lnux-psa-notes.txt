@@ -600,6 +600,59 @@ sudo find /home -mtime 1 -print
 sudo find /home -mtime +30 -delete
 ✅ Effect: Deletes files inside /home that haven’t been modified in the last 30 days.
 
+###################################################
+Working with ZIP Files in Linux
+The zip command in Linux is used to compress files and directories into a .zip archive, while the unzip command is used to extract them.
+###################################################
+
+1️⃣ Creating a ZIP File
+Syntax:
+zip [zip-file-name] [files/directories]
+
+Example: Compressing Multiple Files
+
+# Create empty text files
+touch file1.txt file2.txt file3.txt
+
+# Create a ZIP archive containing all `.txt` files
+zip my_archive.zip *.txt
+✅ Effect: Compresses all .txt files into my_archive.zip.
+
+2️⃣ Extracting a ZIP File
+Syntax:
+unzip [zip-file-name]
+
+Example: Unzipping a File
+unzip my_archive.zip
+✅ Effect: Extracts my_archive.zip into the current directory.
+
+3️⃣ Additional ZIP Options
+1. Create a ZIP Archive of a Directory
+zip -r my_folder.zip my_folder
+✅ Effect: Compresses my_folder and all its contents recursively.
+
+2. List Contents of a ZIP File
+unzip -l my_archive.zip
+✅ Effect: Displays a list of files inside my_archive.zip.
+
+3. Extract ZIP to a Specific Directory
+unzip my_archive.zip -d /path/to/destination
+✅ Effect: Extracts files to /path/to/destination.
+
+4. Delete Files from a ZIP Archive (Without Extracting)
+zip -d my_archive.zip file2.txt
+✅ Effect: Removes file2.txt from my_archive.zip.
+
+5. Password-Protect a ZIP File
+zip -e secure_data.zip secret_file.txt
+✅ Effect: Compresses secret_file.txt into secure_data.zip with password protection.
+
+4️⃣ Summary
+zip [zip-file.zip] [files] → Compress files into a ZIP archive.
+unzip [zip-file.zip] → Extracts a ZIP file.
+zip -r [zip-file.zip] [directory] → Compresses a directory recursively.
+unzip -l [zip-file.zip] → Lists the contents of a ZIP file.
+unzip [zip-file.zip] -d [destination] → Extracts to a specific location.
 
 
 
