@@ -652,8 +652,42 @@ zip [zip-file.zip] [files] → Compress files into a ZIP archive.
 unzip [zip-file.zip] → Extracts a ZIP file.
 zip -r [zip-file.zip] [directory] → Compresses a directory recursively.
 unzip -l [zip-file.zip] → Lists the contents of a ZIP file.
-unzip [zip-file.zip] -d [destination] → Extracts to a specific location.
+
+################################################
+Networking Commands
+#################################################
+
+ping : To check connectivityping url/ip address
+
+wget : Used to download files from the internet wget <url>
+
+curl : Used to send HTTP requests to a server curl https://zenquotes.io/api/random
+
+ifconfig : To get the IP address of the machine ifconfig
+
+##########################################################
+Package Managers in Linux
+##########################################################
+
+Package: A package is a software application or tool.Examples: git, maven, java, python, etc.
+
+Package Managers are used to install, update, and manage software packages on Linux machines.They are specific to the Linux distribution:
+
+Amazon Linux / Red Hat Linux / CentOS: yum
+
+Ubuntu / Debian: apt
+
+Common Commands:
+
+Check if Git client is installed:git --version
+
+Install Git client software: sudo yum install git (For Ubuntu/Debian: sudo apt install git)
+
+Check Git installation path:whereis git
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Remaining Notes will be updated soon%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%END%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
