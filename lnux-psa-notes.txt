@@ -688,6 +688,8 @@ Check Git installation path:whereis git
 To Unstall git:
 sudo yum remove git -y
 
+To Uninstall Maven:
+sudo yum remove maven -y
 
 
 
