@@ -685,6 +685,9 @@ Install Git client software: sudo yum install git (For Ubuntu/Debian: sudo apt i
 
 Check Git installation path:whereis git
 
+To Unstall git:
+sudo yum remove git -y
+
 
 
 
