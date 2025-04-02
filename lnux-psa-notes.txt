@@ -691,6 +691,60 @@ sudo yum remove git -y
 To Uninstall Maven:
 sudo yum remove maven -y
 
+#####################################
+Linux Architecture Components
+#####################################
+
+The Linux operating system is built on a modular architecture consisting of four main components:
+
+1) Applications / Commands
+
+These are the user-space programs that run on Linux, such as web browsers and linux commands
+
+2) Shell
+
+The shell acts as an interface between users and the system.
+
+It interprets commands and sends them to the kernel for execution.
+
+Examples of Linux shells:
+
+Bash (Bourne Again Shell) - Default shell in most Linux distributions.
+
+Zsh (Z Shell) - Advanced shell with additional features.
+
+Fish - User-friendly, interactive shell.
+
+3) Kernel
+
+The core component of Linux that manages system resources.
+
+Responsibilities include:
+
+Process Management - Allocating CPU time to running programs.
+
+Memory Management - Handling RAM space.
+
+Device Management - Communicating with hardware like hard drives and USB devices.
+
+System Calls - Allowing applications to request services from the operating system.
+
+4) Hardware Components
+
+The physical components of a Linux system, including:
+
+CPU - Executes instructions.
+
+RAM - Stores temporary data for processes.
+
+Storage (HDD/SSD) - Holds files and the operating system.
+
+Network Interfaces - Enables communication between devices.
+
+Peripherals - Includes keyboards, mice, printers, etc.
+
+Each of these components works together to ensure a stable and functional Linux environment.
+
 
 
 
